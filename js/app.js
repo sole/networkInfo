@@ -16,7 +16,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
     if(status === 'associated' || status === 'connected') {
       var network = wifiManager.connection.network;
-      fields.push(['SSID', network.ssid]);
+      fields.push(['Network name', network.ssid]);
+      fields.push(['Security', network.security]);
     }
 
     if(connInfo) {
